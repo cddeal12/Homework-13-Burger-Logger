@@ -25,8 +25,8 @@ router.post("/api/burgers", function(req, res) {
 });
 
 // Changes a burger's state to devoured
-router.put("/api/burgers/:burger_name", function(req, res) {
-    burger.updateDevoured(req.params.burger_name, true, function(result) {
+router.put("/api/burgers/:id", function(req, res) {
+    burger.updateDevoured(req.params.id, true, function(result) {
         console.log(result);
         res.status(200).end();
     });

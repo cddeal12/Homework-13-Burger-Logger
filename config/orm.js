@@ -22,8 +22,8 @@ const orm = {
     },
 
     // Updates the 'devoured' status of a burger in the database, devouredUpdate should be either true or false
-    updateOne: function(burgerName, devouredUpdate, callback) {
-        var queryString = "UPDATE burgers SET devoured=" + devouredUpdate + " WHERE name=" + burgerName + ";"
+    updateOne: function(id, devouredUpdate, callback) {
+        var queryString = "UPDATE burgers SET devoured=" + devouredUpdate + " WHERE id=" + id + ";"
         connection.query(queryString, function(err, result) {
             if (err) throw err;
             callback(result);
