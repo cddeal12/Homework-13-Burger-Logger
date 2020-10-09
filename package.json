@@ -1,0 +1,24 @@
+{
+  "name": "homework-13-burger-logger",
+  "version": "1.0.0",
+  "description": "A site to track and devour burgers.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cddeal12/Homework-13-Burger-Logger.git"
+  },
+  "author": "cddeal12",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cddeal12/Homework-13-Burger-Logger/issues"
+  },
+  "homepage": "https://github.com/cddeal12/Homework-13-Burger-Logger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
