@@ -5,14 +5,18 @@ const burger = require("../models/burger.js")
 
 // Create router
 var router = express.Router();
+
 //Routes
 // =================================================
 
 // Renders all burgers by default on the main page
 router.get("/", function(req, res) {
-    burger.selectAll(function(result) {
-        console.log("Rendering " + result)
-        res.render("index", result);
+    burger.selectAll(function(data) {
+        var pageContentObject = {
+            burgers: data
+        }
+        console.log(pageContentObject);
+        res.render("index", pageContentObject);
     });
 });
 

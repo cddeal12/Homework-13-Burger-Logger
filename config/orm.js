@@ -14,8 +14,8 @@ const orm = {
 
     // Adds a burger to the database, always starts as NOT devoured
     insertOne: function(burgerName, callback) {
-        var queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (" + burgerName + ", false);"
-        connection.query(queryString, function(err, result) {
+        var queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (?, false);"
+        connection.query(queryString, [burgerName], function(err, result) {
             if (err) throw err;
             callback(result);
         });
